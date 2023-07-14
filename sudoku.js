@@ -1,5 +1,5 @@
 /**
- * Принимает игровое поле в формате строки — как в файле sudoku-puzzles.txt. DONE!!!
+ * Принимает игровое поле в формате строки — как в файле sudoku-puzzles.txt.
  * Возвращает игровое поле после попытки его решить.
  * Договорись со своей командой, в каком формате возвращать этот результат.
  */
@@ -8,7 +8,7 @@ function solve(boardString) {
   for (let i =0; i < boardString.length; i = i+9) {
     const a = i
     const b = i+9 
-    newBoard.push([boardString.slice(a, b)])
+    newBoard.push(boardString.slice(a, b).split(''))
   }
   return newBoard
 }
@@ -36,3 +36,4 @@ module.exports = {
   isSolved,
   prettyBoard,
 };
+console.log(solve('1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--'));
