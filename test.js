@@ -24,4 +24,5 @@ function foo() {
     }
     return newBoard
 }
-// console.log(foo(newBoard))
+
+console.log(foo(newBoard))
