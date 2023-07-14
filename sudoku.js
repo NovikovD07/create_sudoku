@@ -1,9 +1,16 @@
 /**
- * Принимает игровое поле в формате строки — как в файле sudoku-puzzles.txt.
+ * Принимает игровое поле в формате строки — как в файле sudoku-puzzles.txt. DONE!!!
  * Возвращает игровое поле после попытки его решить.
  * Договорись со своей командой, в каком формате возвращать этот результат.
  */
 function solve(boardString) {
+  const newBoard = [];
+  for (let i =0; i < boardString.length; i = i+9) {
+    const a = i
+    const b = i+9 
+    newBoard.push([boardString.slice(a, b)])
+  }
+  return newBoard
 }
 
 /**
